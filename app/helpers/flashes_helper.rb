@@ -5,6 +5,6 @@ module FlashesHelper
   end
 
   def user_facing_flashes
-    falsh.to_hash.slice "alert", "notice", "warning"
+    flash.to_hash.slice "alert", "notice", "warning"
   end
 end
