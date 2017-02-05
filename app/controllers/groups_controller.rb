@@ -58,7 +58,7 @@ class GroupsController < ApplicationController
   end
 
   def quit
-    @group = Group.find(params(@group))
+    @group = Group.find(params[:id])
 
     if current_user.is_member_of?(@group)
      current_user.quit!(@group)
@@ -67,7 +67,7 @@ class GroupsController < ApplicationController
      flash[:warning] = "你不是本讨论版成员，怎么退出 XD"
    end
 
-   reditect_to group_path(@group)
+   redirect_to group_path(@group)
  end
 
 
