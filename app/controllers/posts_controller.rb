@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
     if @post.save
       redirect_to group_path(@group)
-    elsif
+    else
       render :new
     end
   end
